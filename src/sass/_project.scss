@@ -1,0 +1,235 @@
+// ======================= PROJECT SECTION STYLING ===================
+
+.project {
+  width: 100%;
+  margin: 150px 0px 100px;
+  overflow: hidden;
+  position: relative;
+
+  @media screen and (max-width: 650px) {
+    margin: 50px 0px;
+  }
+}
+
+// ------- SWIPER JS CONTAINER STYLING -------
+
+.swiper {
+  width: 100%;
+  max-width: 1600px;
+  padding: 150px 15px 0px 15px;
+
+  @media screen and (max-width: 650px) {
+    padding: 100px 15px 0px 15px;
+  }
+}
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 380px;
+  height: 420px;
+
+  @media screen and (max-width: 650px) {
+    width: 300px;
+    height: 350px;
+  }
+}
+
+.swiper-3d .swiper-slide-shadow-left {
+  background-image: linear-gradient(
+    to left,
+    rgba(0, 0, 0, 0.2),
+    rgba(0, 0, 0, 0)
+  );
+}
+.swiper-3d .swiper-slide-shadow-right {
+  background-image: linear-gradient(
+    to left,
+    rgba(0, 0, 0, 0.2),
+    rgba(0, 0, 0, 0)
+  );
+}
+
+// ---------- PROJECT CARD STYLING ------------
+
+.project-card {
+  @include flexCenter;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  padding: 10px;
+  background: rgba(53, 53, 53, 0.5);
+  position: relative;
+
+  .fade {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    height: 60%;
+    border-radius: 100px;
+    filter: blur(50px);
+    z-index: -1;
+    opacity: 0;
+  }
+}
+
+.project-card-glow {
+  animation: projectCardGlow 1s ease-in-out forwards;
+
+  @keyframes projectCardGlow {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}
+
+.project-content {
+  @include flexCenter;
+  flex-direction: column;
+  width: 100%;
+  row-gap: 20px;
+
+  img {
+    max-width: 130px;
+    height: auto;
+
+    @media screen and (max-width: 650px) {
+      width: 90px;
+    }
+  }
+
+  h3 {
+    color: $text-color;
+    font: {
+      size: 24px;
+      weight: 500;
+    }
+    letter-spacing: 0.5px;
+
+    @media screen and (max-width: 650px) {
+      font-size: 22px;
+    }
+  }
+
+  p {
+    text-align: center;
+    font: {
+      size: 18px;
+      weight: 300;
+    }
+    letter-spacing: 0.5px;
+    line-height: 130%;
+    color: $text-color;
+    opacity: 0.6;
+
+    @media screen and (max-width: 650px) {
+      font-size: 16px;
+    }
+  }
+}
+
+.project-links {
+  @include flexCenter;
+  gap: 30px;
+  width: 100%;
+  list-style: none;
+  font: {
+    size: 16px;
+    weight: 300;
+  }
+
+  a {
+    color: $text-color;
+    transition: color 0.4s ease;
+  }
+}
+
+// PROJECT CARD => TIC TAC TOE
+
+.project-card-1 {
+  .fade {
+    background: #363c76;
+  }
+}
+
+.project-links-1 {
+  @extend .project-links;
+
+  a:hover {
+    color: #606abc;
+  }
+}
+
+// PROJECT CARD => W3SCHOOLS
+
+.project-card-2 {
+  .fade {
+    background: rgba(4, 170, 109, 0.5);
+  }
+}
+
+.project-links-2 {
+  @extend .project-links;
+
+  a:hover {
+    color: #04aa6d;
+  }
+}
+
+// PROJECT CARD => PRECOOK RECIPE APP
+
+.project-card-3 {
+  .fade {
+    background: rgba(255, 165, 0, 0.4);
+  }
+}
+
+.project-links-3 {
+  @extend .project-links;
+
+  a:hover {
+    color: #ffa500;
+  }
+}
+
+// PROJECT CARD => EXPENSE TRACKER APP
+
+.project-card-4 {
+  .fade {
+    background: rgba(255, 203, 102, 0.5);
+  }
+}
+
+.project-links-4 {
+  @extend .project-links;
+
+  a:hover {
+    color: #ffcb66;
+  }
+}
+
+// PROJECT CARD => CURIOUS PORTFOLIO APP
+
+.project-card-5 {
+  .fade {
+    background: linear-gradient(
+      180deg,
+      #d2aa41 0%,
+      #a24444 30.04%,
+      #4178cc 50%
+    );
+  }
+}
+
+.project-links-5 {
+  @extend .project-links;
+
+  a:hover {
+    color: #d2aa41;
+  }
+}

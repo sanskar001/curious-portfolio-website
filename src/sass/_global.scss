@@ -1,0 +1,76 @@
+// ======================== GLOBAL STYLING SHEET ========================
+
+// GLOBAL variables for colors
+
+$primary-color: #191a1a;
+$secondary-color: #353535;
+
+$text-color: #fff;
+
+$first-base-color: #d2aa41;
+$second-base-color: #a24444;
+$third-base-color: #4178cc;
+
+// Making flex center (vertically and horizontally)
+@mixin flexCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// Reset Styling
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// Common HTML element styling
+
+html {
+  font-family: "Inter", sans-serif;
+  font-size: 62.5%;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background-color: $primary-color;
+}
+
+.main {
+  width: 100%;
+  max-width: 1920;
+  margin: 0px auto;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: #000;
+}
+
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+// Scroll bar styling
+
+/* Scroll bar width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    to bottom,
+    $first-base-color 0%,
+    $second-base-color 48.44%,
+    $third-base-color 100%
+  );
+  border-radius: 5px;
+}

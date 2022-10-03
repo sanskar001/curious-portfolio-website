@@ -1,0 +1,132 @@
+// ====================== EXPERIENCE SECTION STYLING =======================
+
+.experience {
+  width: 100%;
+  margin: 150px 0px;
+  overflow: hidden;
+  position: relative;
+
+  @media screen and (max-width: 650px) {
+    margin: 50px 0px;
+  }
+}
+
+// EXPERIENCE CARD GRID CONTAINER STYLING
+
+.grid-card-container {
+  width: 100%;
+  padding: 150px 15px 0px 15px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(350px, 500px));
+  justify-content: center;
+  align-items: stretch;
+  gap: 50px;
+
+  @media screen and (min-width: 650px) and (max-width: 1200px) {
+    grid-template-columns: 1fr;
+  }
+
+  @media screen and (max-width: 650px) {
+    grid-template-columns: 1fr;
+    padding: 100px 15px 0px 15px;
+  }
+}
+
+.experience-card {
+  width: 100%;
+  padding: 15px;
+  background: rgba(53, 53, 53, 0.5);
+  border-radius: 10px;
+  position: relative;
+  color: $text-color;
+
+  .fade {
+    content: "";
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    width: 40%;
+    height: 40%;
+    filter: blur(50px);
+    z-index: -1;
+    border-radius: 10px;
+    opacity: 0;
+  }
+}
+
+.experience-card-1 .fade {
+  background: $first-base-color;
+}
+
+.experience-card-2 .fade {
+  background: $third-base-color;
+}
+
+.experience-card-3 .fade {
+  background: $second-base-color;
+}
+
+.glow-card {
+  animation: glow 1.2s ease-in-out forwards;
+
+  @keyframes glow {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 0.5;
+    }
+  }
+}
+
+.experience-title {
+  font: {
+    size: 32px;
+    weight: 500;
+  }
+  margin-bottom: 20px;
+
+  @media screen and (max-width: 650px) {
+    font-size: 28px;
+  }
+}
+
+.experience-card-1 .experience-title {
+  color: $first-base-color;
+}
+.experience-card-2 .experience-title {
+  color: $third-base-color;
+}
+.experience-card-3 .experience-title {
+  color: $second-base-color;
+}
+
+.experience-company {
+  font: {
+    size: 24px;
+    weight: 400;
+  }
+  margin-bottom: 10px;
+
+  @media screen and (max-width: 650px) {
+    font-size: 20px;
+  }
+}
+
+.experience-period {
+  font-size: 16px;
+  color: #aaaaaa;
+  margin-bottom: 20px;
+}
+
+.experience-detail {
+  font-size: 20px;
+  font-weight: 300;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+
+  @media screen and (max-width: 650px) {
+    font-size: 16px;
+  }
+}

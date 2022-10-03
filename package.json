@@ -1,0 +1,25 @@
+{
+  "name": "curious",
+  "version": "1.0.0",
+  "description": "My portfolio website",
+  "default": "index.html",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html --dist-dir ./dist"
+  },
+  "keywords": [
+    "portfolio"
+  ],
+  "author": "Sanskar Maheshwari",
+  "license": "ISC",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.7.0",
+    "parcel": "^2.7.0"
+  },
+  "dependencies": {
+    "core-js": "^3.25.3",
+    "leaflet": "^1.9.1",
+    "regenerator-runtime": "^0.13.9",
+    "swiper": "^8.4.2"
+  }
+}

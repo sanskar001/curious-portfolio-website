@@ -1,0 +1,170 @@
+// =================== CONTACT SECTION STYLING =====================
+
+.contact {
+  width: 100%;
+  margin: 150px 0px;
+  overflow: hidden;
+  position: relative;
+
+  @media screen and (max-width: 650px) {
+    margin: 50px 0px;
+  }
+}
+
+// --------  CONTACT FORM STYLING ---------
+
+.contact-form {
+  width: 100%;
+  max-width: 550px;
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "senderName email"
+    "subject subject"
+    "message message"
+    "actions actions";
+  gap: 20px;
+
+  @media screen and (min-width: 650px) and (max-width: 1100px) {
+    margin: 30px auto 0px auto;
+  }
+
+  @media screen and (max-width: 650px) {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "senderName"
+      "email"
+      "subject"
+      "message"
+      "actions";
+  }
+
+  input {
+    display: inline-block;
+    width: 100%;
+    height: 45px;
+    padding: 10px;
+    font: {
+      size: 16px;
+      family: "Inter", sans-serif;
+      weight: 300;
+    }
+    letter-spacing: 0.5px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    color: $text-color;
+    background-color: $secondary-color;
+  }
+
+  label {
+    display: inline-block;
+    width: 100%;
+    font-size: 18px;
+    color: #d1cfa0;
+    margin-bottom: 5px;
+  }
+}
+
+.input-liftUp {
+  position: relative;
+  top: 60px;
+  opacity: 0;
+  animation: inputLiftUp 0.45s ease-in-out forwards;
+}
+
+@keyframes inputLiftUp {
+  from {
+    top: 60px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+.sender-name {
+  grid-area: senderName;
+  animation-delay: 1.2s;
+}
+
+.email {
+  grid-area: email;
+  animation-delay: 1.2s;
+}
+
+.subject {
+  grid-area: subject;
+  animation-delay: 1.3s;
+}
+
+.message-box {
+  grid-area: message;
+  animation-delay: 1.4s;
+
+  textarea {
+    display: inline-block;
+    width: 100%;
+    padding: 10px;
+    font: {
+      size: 16px;
+      family: "Inter", sans-serif;
+      weight: 300;
+    }
+    letter-spacing: 0.5px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    color: $text-color;
+    background-color: $secondary-color;
+    resize: none;
+  }
+}
+
+.actions {
+  animation-delay: 1.5s;
+  grid-area: actions;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 50px;
+  align-items: center;
+
+  button {
+    height: 45px;
+    font: {
+      size: 16px;
+      family: "Inter", sans-serif;
+      weight: 500;
+    }
+    border-radius: 5px;
+    background: linear-gradient(90deg, #649173 0%, #dbd5a4 100%);
+  }
+
+  .download-btn a {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    line-height: 45px;
+  }
+
+  @media screen and (max-width: 650px) {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+// --------  RIGHT SIDE GLOBE STYLING ---------
+
+.globe {
+  @include flexCenter;
+  width: 100%;
+  height: 100%;
+
+  img {
+    width: 75%;
+    min-width: 330px;
+    max-width: 500px;
+    height: auto;
+  }
+}

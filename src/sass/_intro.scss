@@ -1,0 +1,154 @@
+// ========================== INTRO SECTION STYLING =======================
+
+.intro {
+  width: 100%;
+  height: 100vh;
+  overflow-y: hidden;
+  padding: 20px 10px;
+}
+
+// ------- HEADER STYLING -----------
+
+.intro header {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    width: 150px;
+    height: auto;
+
+    @media screen and (max-width: 600px) {
+      width: 120px;
+    }
+  }
+}
+
+// ------- MAIN BODY STYLING -----------
+
+.intro main {
+  width: 100%;
+  height: calc(100vh - 240px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  row-gap: 30px;
+  text-align: center;
+}
+
+// TYPING TEXT STYLING
+
+#typing-text {
+  @include flexCenter;
+
+  h1 {
+    font: {
+      size: 108px;
+      weight: 700;
+    }
+    background: linear-gradient(
+      90deg,
+      $first-base-color 0%,
+      $second-base-color 48.44%,
+      $third-base-color 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+
+    @media screen and (min-width: 600px) and (max-width: 1400px) {
+      font-size: 80px;
+    }
+
+    @media screen and (max-width: 600px) {
+      font-size: 72px;
+    }
+  }
+}
+
+// MY INFORMATION (NAME, ROLE) STYLING
+
+.name {
+  font: {
+    size: 36px;
+    weight: 400;
+  }
+  color: $text-color;
+  position: relative;
+  opacity: 0;
+  animation: liftUp 1s ease-in-out 1.6s 1 forwards;
+
+  @media screen and (max-width: 600px) {
+    font-size: 24px;
+  }
+}
+
+.hand {
+  display: inline-block;
+  transform-origin: right bottom;
+  animation: waving 1s ease-in-out infinite alternate;
+
+  @keyframes waving {
+    from {
+      transform: rotate(60deg);
+    }
+    to {
+      transform: rotate(10deg);
+    }
+  }
+}
+
+.role {
+  font: {
+    size: 24px;
+    weight: 400;
+  }
+  color: #ababab;
+  margin-top: 20px;
+  position: relative;
+  opacity: 0;
+  animation: liftUp 0.8s ease-in-out 1.7s 1 forwards;
+
+  @media screen and (max-width: 600px) {
+    font-size: 20px;
+  }
+}
+
+@keyframes liftUp {
+  from {
+    opacity: 0;
+    top: 100px;
+  }
+  to {
+    opacity: 1;
+    top: 0px;
+  }
+}
+
+// ------- FOOTER STYLING -----------
+
+.intro footer {
+  width: 100%;
+  height: 100px;
+  padding: 10px;
+  text-align: center;
+
+  button {
+    background: transparent;
+    padding: 10px;
+    position: relative;
+    animation: movedown 0.8s ease-in-out infinite alternate;
+  }
+
+  @keyframes movedown {
+    from {
+      top: 0;
+    }
+    to {
+      top: 30px;
+    }
+  }
+}

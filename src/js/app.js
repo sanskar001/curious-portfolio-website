@@ -65,7 +65,9 @@ class App {
       {
         maxZoom: 16,
         minZoom: 4,
-        accessToken: process.env.JAWG_ACCESS_KEY,
+        // accessToken: process.env.JAWG_ACCESS_KEY,
+        accessToken:
+          "elWohq7VscpEqssBM2AJencMUbOoJyjNPrkyJ5XgK5hOfx9mIkghvlj79hKLiZvd",
       }
     ).addTo(this._map);
 
@@ -268,9 +270,9 @@ class App {
 
     // 4) Sending mail to given email using "smtp.js".
     Email.send({
-      SecureToken: process.env.SMTPJS_ACCESS_TOKEM,
-      To: process.env.RECEIVER_EMAIL_ADDRESS,
-      From: process.env.SENDER_EMAIL_ADDRESS,
+      SecureToken: "8254b02a-9c33-43e6-b047-0953f713a577",
+      To: "sanskarm001@gmail.com",
+      From: "sanskarm2000@gmail.com",
       Subject: subject.value,
       Body: messageBody,
     }).then((msg) => {

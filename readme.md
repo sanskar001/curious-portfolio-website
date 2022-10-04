@@ -4,6 +4,6 @@
 
 This is my responsive portfolio website made up of beautiful animation, leaflet API and interactive contact form.
 
-[Visit website 🚀](https://www.google.com)
+[Visit website 🚀](https://curious-sanskar-maheshwari.netlify.app/)
 
 [See design on figma 🎨](https://www.figma.com/file/TPVrPnbDw19ICXlrzUJKXE/Portfolio-Website?node-id=2%3A2)

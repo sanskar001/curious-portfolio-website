@@ -233,3 +233,19 @@
     color: #d2aa41;
   }
 }
+
+// PROJECT CARD => TRADE CHART WIDGETi
+
+.project-card-6 {
+  .fade {
+    background: rgba(213, 213, 213, 0.5);
+  }
+}
+
+.project-links-6 {
+  @extend .project-links;
+
+  a:hover {
+    color: #229489;
+  }
+}
